@@ -1,61 +1,70 @@
-#1. Find the data type of a if a=9
-a = 9
-print(type(a))
-#<class 'int'>
+#Q1. Python program to print Highest Common Factor (HCF) of two numbers
+#Example : Take values according to you
+num1 = int(input("Enter first Number:"))
+num2 = int(input("Enter Second Number:"))
+if num1>num2:
+    smaller_num = num1
+else:
+    smaller_num = num2
+for i in range(1,smaller_num+1):
+    if ((num1%i==0)and(num2%i==0)):
+        hcf = i
 
-#2. Find the data type of a if a=9
-a = 9
-print(type(a))
-#<class 'int'>
+print("The H.C.F. of",num1,"and",num2,"is",hcf)
 
-#3. Find the data type of a if a='9.'
-a = '9.'
-print(type(a))
-#<class 'str'>
+#Q2. What will be the output of the following Python code?
+i=0
+def change(i):
+    i=i+1
+    return i
+change(1)
+print(i)
+#a) 1
+#b) Nothing is displayed
+#c) 0
+#d) An exception is thrown
+#Ans. c)0
 
-#4. Find the data type of a if a=(9)
-a=(9)
-print(type(a))
-#<class 'int'>
+#Q3. What will be the output of the following Python code?
+def a(b):
+    b = b + [5]
+c = [1, 2, 3, 4]
+a(c)
+print(len(c))
+#Ans. 4
 
-#5. Find the data type of a if a=False
-a=False
-print(type(a))
-#<class 'bool'>
+#Q4. What will be the output of the following Python code?
+a=10
+b=20
+def change():
+    global b
+    a=45
+    b=56
+change()
+print(a)
+print(b)
+#a)
+#10
+#56
+#b)
+#45
+#56
+#c)
+#10
+#20
+#d) Syntax Error
+#Ans #a)
+     #10
+     #56
 
-#6. Find the data type of a if a=[1,2,3]
-a=[1,2,3]
-print(type(a))
-#<class 'list'>
-
-#7. Find the data type of a if a=(1,2,3)
-a=(1,2,3)
-print(type(a))
-#<class 'tuple'>
-
-#8. Find the data type of a if a={'key': 9}
-a={'key': 9}
-print(type(a))
-#<class 'dict'>
-
-#9. Find the data type of a if a=1 + 9j
-a=1 + 9j
-print(type(a))
-#<class 'complex'>
-
-#10. Set a=1 and b=2. What data type is a/b?
-a = 1
-b = 2
-c = a/b
-print(type(a/b))
-#<class 'float'>
-
-#11. Create a dictionary numbers = {'one':1, 'two':2, 'three':3}. Pull out the number '2' by calling the key 'two'
-numbers = {'one':1, 'two':2, 'three':3}
-print(numbers['two'])
-#2
-
-#12. Create a tuple with the numbers 8, 9, and 10?
-numbers=(8,9,10)
-print(type(numbers))
-#<class 'tuple'>
+#Q5. What will be the output of the following Python code?
+def change(i = 1, j = 2):
+    i = i + j
+    j = j + 1
+    print(i, j)
+change(j = 1, i = 2)
+#a) An exception is thrown because of conflicting values
+#b) 1 2
+#c) 3 3
+#d) 3 2
+#Ans. d) 3 2
